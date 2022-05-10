@@ -3,6 +3,9 @@ jobs:
   build:
     docker:
       - image: cimg/php:7.4-browser
+        auth:
+          username: mydockerhub-user
+          password: $DOCKERHUB_PASSWORD
       - image: cimg/mysql:8.0
         auth:
           username: mydockerhub-user
@@ -15,4 +18,4 @@ jobs:
       - run:
           name: Update apt-get
           command: sudo apt-get update
-          
+
