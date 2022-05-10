@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: cimg/php:7.4-browser
+      - image: cimg/php:7.4-browsers
         auth:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD
